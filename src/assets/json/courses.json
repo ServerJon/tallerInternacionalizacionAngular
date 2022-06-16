@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Curso básico de Angular",
+    "price": 200
+  },
+  {
+    "id": 2,
+    "name": "Curso HTML y CSS",
+    "price": 100
+  },
+  {
+    "id": 3,
+    "name": "Curso RestAPI con Django",
+    "price": 500
+  }
+]
