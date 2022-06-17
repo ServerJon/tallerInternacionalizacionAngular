@@ -122,8 +122,8 @@
               <!-- Weight Column -->
               <ng-container matColumnDef="price">
                 <th mat-header-cell *matHeaderCellDef i18n> Precio </th>
-                <td mat-cell *matCellDef="let element"> {{ element.price | currency }} </td>
-                <td mat-footer-cell *matFooterCellDef> {{ getAmount() | currency }}</td>
+                <td mat-cell *matCellDef="let element"> {{ element.price | i28nCurrency }} </td>
+                <td mat-footer-cell *matFooterCellDef> {{ getAmount() | i28nCurrency }}</td>
               </ng-container>
 
               <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
