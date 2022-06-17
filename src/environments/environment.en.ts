@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   i18n: {
-    defaultLocale: 'es',
-    currency: 'EUR',
+    defaultLocale: 'en',
+    currency: 'USD',
   }
 };
 

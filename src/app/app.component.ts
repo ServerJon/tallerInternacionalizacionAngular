@@ -10,7 +10,7 @@ import { Course } from './models/course.interface';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'Taller i18n, Internacionalización en Angular';
+  title = $localize`Taller i18n, Internacionalización en Angular`;
   displayedColumns: string[] = ['id', 'name', 'price'];
   dataSource!: MatTableDataSource<Course>;
   amount: number;

@@ -13,10 +13,20 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "es",
+        "locales": {
+          "en": {
+            "translation": "src/locale/messages.en.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/taller-internacionalizacion-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -56,12 +66,24 @@
               "outputHashing": "all"
             },
             "development": {
+              "localize": false,
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "en": {
+              "localize": ["en"],
+              "outputPath": "dist/taller-internacionalizacion-angular/en",
+              "i18nMissingTranslation": "error",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.en.prod.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -74,6 +96,9 @@
             },
             "development": {
               "browserTarget": "tallerInternacionalizacionAngular:build:development"
+            },
+            "en": {
+              "browserTarget": "tallerInternacionalizacionAngular:build:en"
             }
           },
           "defaultConfiguration": "development"

@@ -4,9 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:en": "ng serve --configuration=en",
     "build": "ng build",
+    "build:en": "ng build --configuration=en",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "extract:i18n": "ng extract i18n --output-path src/locale",
+    "server:en": "npm run build && angular-http-server --open -p 4300 --path ./dist/taller-internacionalizacion-angular/en",
+    "server:es": "npm run build && angular-http-server --open -p 4343 --path ./dist/taller-internacionalizacion-angular/es"
   },
   "private": true,
   "dependencies": {
@@ -28,7 +33,9 @@
     "@angular-devkit/build-angular": "^14.0.2",
     "@angular/cli": "~14.0.2",
     "@angular/compiler-cli": "^14.0.0",
+    "@angular/localize": "^14.0.2",
     "@types/jasmine": "~4.0.0",
+    "angular-http-server": "^1.10.0",
     "jasmine-core": "~4.1.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
